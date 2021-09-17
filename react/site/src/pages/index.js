@@ -173,7 +173,6 @@ const loading = useRef(null);
                                             <div class="input"> <input  value={avaliacao} onChange={ (x) => setAvaliacao(x.target.value) }/> </div> 
                                         </div>
                                     </div>
-
                                     <div class="input-two">
                                         <div class="agp-input">
                                             <div class="corse-student"> Preço DE: </div>  
@@ -189,34 +188,27 @@ const loading = useRef(null);
                                         </div>
                                     </div>
                                 </div>
-                                
-
                                 <div class="input-four">
                                     <div class="agp-input">
                                         <div class="link-image"> Link Imagem: </div>  
                                         <div class="input-linkImg"> <input value={img} onChange={ (x) => setImg(x.target.value) } /> </div>  
                                     </div>
                                 </div>
-
                                 <div class="textarea-one">
                                     <div class="agp-input">
                                         <div class="ds-product"> Descrição: </div>  
                                         <div class="textarea"> <textarea value={descricao} onChange={ (x) => setDescricao(x.target.value) } style={{"resize": "none"}} /> </div> 
                                     </div>
                                 </div>
-
-                            </div>
-                            
+                            </div>                           
                             <div class="button-create"> <button onClick={inserirProduto} > { idProduto === 0 ? 'Cadastrar' : 'Alterar'} </button> </div>
                         </div>
                     </div>
-
                     <div class="student-registered-box">
                     <div class="row-bar"> 
                         <div class="bar-new-student"> </div>
                         <div class="text-registered-student"> Produtos </div>
                     </div>
-
                         <table class ="table-user">
                             <thead>
                                 <tr>
@@ -243,7 +235,7 @@ const loading = useRef(null);
                                             <td> {x.ds_categoria} </td>
                                             <td> {x.vl_preco_por} </td>
                                             <td> {x.qtd_estoque} </td>
-                                            <td> <button onClick={ () => alterarProduto(x.id_produto, x.nm_produto, x.ds_categoria, x.vl_preco_de, x.vl_preco_por, x.vl_avaliacao, x.ds_produto, x.qtd_estoque, x.img_produto ) }> <img src="/assets/images/editt.svg" style={{width: "25px"}} alt = "" />  </button> </td>
+                                            <td> <button onClick={ () => alterarProduto(x.id_produto, x.nm_produto, x.ds_categoria, x.vl_preco_de, x.vl_preco_por, x.vl_avaliacao, x.ds_produto, x.qtd_estoque, x.img_produto ) }> <img src="/assets/images/edit.svg" style={{width: "25px"}} alt = "" />  </button> </td>
                                             <td> <button onClick={ () => removerProduto(x.id_produto) }> <img src="/assets/images/lixo.svg" alt="" />  </button> </td>
                                         </tr>
                                     
